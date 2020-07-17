@@ -10,13 +10,13 @@
 </head>
 <body>
     <header class="hero-banner container-fluid d-flex flex-column vh-100">
-        <div class="hero-banner__content row flex-grow-1">
+        <div class="hero-banner__body row flex-grow-1 position-relative">
             <picture>
                 <source media="(max-width: 499px)" srcset="<?= get_template_directory_uri(); ?>/assets/images/hero-banner-mobile.jpg">
                 <source media="(min-width: 500px)" srcset="<?= get_template_directory_uri(); ?>/assets/images/hero-banner.jpg">
                 <img class="hero-banner__image" src="<?= get_template_directory_uri(); ?>/assets/images/hero-banner.jpg" alt="Mountains and river">
             </picture>
-            <div class="col h-100 text-center d-flex flex-column justify-content-center justify-content-xl-start align-items-center pb-4">
+            <div class="hero-banner__content col h-100 text-center d-flex flex-column justify-content-center justify-content-xl-start align-items-center pb-4 position-static">
                 <img class="logo logo--big" src="<?= get_template_directory_uri(); ?>/assets/images/logo-centered.svg" alt="Applover">
                 <hr class="divider">
                 <div class="text-white flex-xl-grow-1">
@@ -32,10 +32,17 @@
                 </div>
                 <span class="icon icon--mouse d-none d-xl-inline"></span>
             </div>
+            <nav class="hero-banner__nav d-none d-lg-flex h-100">
+                <ul>
+                    <li><a class="text-white" href="#section1">Section 1</a></li>
+                    <li><a class="text-white" href="#section2">Section 2</a></li>
+                    <li><a class="text-white" href="#section3">Section 3</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="ticker shadow row d-none d-xl-block bg-white">
-            <div class="container py-3">
-                <div class="row align-items-center">
+        <div class="ticker shadow row d-none d-lg-block bg-white">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
                     <div class="col-2">
                         <img class="logo" src="<?= get_template_directory_uri(); ?>/assets/images/logo-left.svg" alt="Applover">
                     </div>

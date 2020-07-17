@@ -2,7 +2,6 @@
   position: relative;
 
   &__content {
-
     @include media-breakpoint-up(xl) {
       padding-top: 8%;
     }
@@ -13,8 +12,63 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100% + #{$ticker-height});
     object-fit: cover;
     z-index: -1;
+  }
+
+  &__nav {
+    position: absolute;
+    right: rem-calc(95);
+    top: 50%;
+    transform: translateY(-50%);
+    align-items: center;
+    height: 100%;
+    font-size: rem-calc(13);
+    font-family: $font-family-secondary;
+
+    ul {
+      font-weight: $font-weight-bold;
+      margin-right: rem-calc(35);
+    }
+
+    li {
+      margin-bottom: rem-calc(35);
+    }
+
+    a {
+      color: $white;
+      display: flex;
+      align-items: center;
+      transition: color .2s ease-in;
+
+      &::after {
+        content: '';
+        height: rem-calc(10);
+        width: rem-calc(10);
+        background: $white;
+        border-radius: 50%;
+        position: absolute;
+        right: rem-calc(-5);
+      }
+
+      &:hover {
+        &::after {
+          background: var(--primary);
+          animation-name: pulse;
+          animation-duration: .5s;
+        }
+      }
+    }
+
+    &::before {
+      content: '';
+      height: 100%;
+      width: rem-calc(1);
+      background: rgba($white, 0.35);
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
   }
 }
