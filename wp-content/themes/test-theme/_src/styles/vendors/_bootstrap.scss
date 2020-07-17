@@ -1,5 +1,34 @@
-// Imports
+// Settings
 
+// -- Colors
+$primary: #40AE49;
+
+$gray-100: #EAEAEA !default;
+$gray-800: #252B35 !default;
+$black: #1C1F2B !default;
+
+// -- Fonts
+$enable-responsive-font-sizes: true;
+
+$font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+$font-size-lg: rem-calc(24);
+$font-size-sm: rem-calc(14);
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 600;
+$font-weight-bolder: 700;
+
+$h1-font-size: rem-calc(40);
+$h2-font-size: rem-calc(32);
+$h3-font-size: rem-calc(24);
+
+// -- Shadow
+$enable-shadows: true;
+$box-shadow: rem-calc(0 5 10) rgba($black, .20);
+
+  // Imports
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
@@ -7,7 +36,6 @@
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/type";
 @import "~bootstrap/scss/images";
-//@import "~bootstrap/scss/code";
 @import "~bootstrap/scss/grid";
 @import "~bootstrap/scss/tables";
 @import "~bootstrap/scss/forms";
@@ -31,9 +59,8 @@
 //@import "~bootstrap/scss/close";
 //@import "~bootstrap/scss/modal";
 //@import "~bootstrap/scss/tooltip";
+//@import "~bootstrap/scss/code";
 //@import "~bootstrap/scss/popover";
 //@import "~bootstrap/scss/carousel";
-@import "~bootstrap/scss/utilities";
 //@import "~bootstrap/scss/print";
-
-// Settings
+@import "~bootstrap/scss/utilities";

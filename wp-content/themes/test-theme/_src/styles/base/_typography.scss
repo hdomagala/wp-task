@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+$font-family-secondary: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+.font-secondary {
+  font-family: $font-family-secondary;
+}

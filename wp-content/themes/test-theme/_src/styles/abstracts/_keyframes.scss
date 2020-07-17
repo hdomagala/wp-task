@@ -1,0 +1,5 @@
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1;}
+  100% { transform: translateY(#{rem-calc(13)}) scaleY(0.6); opacity: 0;}
+}

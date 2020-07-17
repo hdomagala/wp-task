@@ -1,0 +1,9 @@
+.logo {
+  &--big {
+    width: rem-calc(160);
+
+    @include media-breakpoint-up(lg) {
+      width: rem-calc(300);
+    }
+  }
+}

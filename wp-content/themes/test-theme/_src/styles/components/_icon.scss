@@ -1,0 +1,22 @@
+.icon {
+  &--mouse {
+    width: rem-calc(32);
+    height: rem-calc(48);
+    border: rem-calc(1) solid $white;
+    border-radius: rem-calc(16);
+    text-align: center;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: rem-calc(8);
+      width: rem-calc(4);
+      height: rem-calc(14);
+      background: $white;
+      border-radius: rem-calc(10);
+      margin-left: rem-calc(-2);
+      animation: 1.5s ease-in infinite running scroll;
+    }
+  }
+}
