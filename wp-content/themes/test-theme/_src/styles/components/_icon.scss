@@ -19,4 +19,34 @@
       animation: 1.5s ease-in infinite running scroll;
     }
   }
+
+  &--hamburger {
+    position: fixed;
+    top: rem-calc(32);
+    left: rem-calc(20);
+    width: rem-calc(24);
+    z-index: $zindex-tooltip;
+
+    span, &::after, &::before {
+      background-color: $white;
+      border-radius: 3px;
+      content: '';
+      display: block;
+      height: rem-calc(3);
+      margin: rem-calc(5 0);
+      transition: transform .2s ease-in-out;
+    }
+
+    &.active{
+      &::before {
+        transform: translateY(8px) rotate(135deg);
+      }
+      &::after {
+        transform: translateY(-8px) rotate(-135deg);
+      }
+      & span {
+        transform: scale(0);
+      }
+    }
+  }
 }

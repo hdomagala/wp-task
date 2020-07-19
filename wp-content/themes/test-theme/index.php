@@ -11,6 +11,19 @@
 <body>
     <header class="hero-banner container-fluid d-flex flex-column vh-100">
         <div class="hero-banner__body row flex-grow-1 position-relative">
+            <span class="icon icon--hamburger d-lg-none" data-toggle-nav="mobile-menu">
+                <span></span>
+            </span>
+            <div class="mobile-nav" id="mobile-menu">
+                <img class="logo logo--big" src="<?= get_template_directory_uri(); ?>/assets/images/logo-centered.svg" alt="Applover">
+                <nav class="mobile-nav__nav">
+                    <ul>
+                        <li><a class="text-white" href="#section1">Section 1</a></li>
+                        <li><a class="text-white" href="#section2">Section 2</a></li>
+                        <li><a class="text-white" href="#section3">Section 3</a></li>
+                    </ul>
+                </nav>
+            </div>
             <picture>
                 <source media="(max-width: 499px)" srcset="<?= get_template_directory_uri(); ?>/assets/images/hero-banner-mobile.jpg">
                 <source media="(min-width: 500px)" srcset="<?= get_template_directory_uri(); ?>/assets/images/hero-banner.jpg">
@@ -62,5 +75,6 @@
     <footer>
 
     </footer>
+    <script src="<?= get_template_directory_uri(); ?>/assets/main.js"></script>
 </body>
 </html>
