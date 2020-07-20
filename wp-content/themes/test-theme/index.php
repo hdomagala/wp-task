@@ -148,11 +148,13 @@
 
         </section>
 
-        <section class="gallery">
+        <section class="gallery mb-lg-5">
+
             <header class="container pt-5 mt-5 pb-4 px-4 px-lg-0">
-                <h2 class="gallery__title text-uppercase font-weight-bold text-center">Section 2</h2>
+                <h2 class="gallery__title text-uppercase font-weight-bolder text-center">Section 2</h2>
                 <hr class="separator separator--with-circle">
             </header>
+
             <div class="container mt-5 px-4 px-lg-0">
                 <div class="row no-gutters">
                     <div class="col-6 col-md-4 col-lg-2">
@@ -193,6 +195,27 @@
                     </div>
                 </div>
             </div>
+
+        </section>
+
+        <section class="cta mt-5 pt-4 pt-lg-5 overflow-hidden">
+
+            <picture>
+                <source media="(max-width: 599px)" srcset="<?= get_template_directory_uri(); ?>/assets/images/bg-leaves-mobile.jpg">
+                <source media="(min-width: 600px)" srcset="<?= get_template_directory_uri(); ?>/assets/images/bg-leaves.jpg">
+                <img class="cta__background" src="<?= get_template_directory_uri(); ?>/assets/images/hero-banner.jpg" alt="Mountains and river">
+            </picture>
+
+            <div class="cta__body container text-center">
+                <img class="logo" src="<?= get_template_directory_uri(); ?>/assets/images/logo-centered.svg" alt="Applover">
+                <p class="mx-auto text-white mt-4 mb-4 mb-lg-5">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.
+                </p>
+                <button class="btn btn-light text-primary font-weight-bold font-secondary">
+                    Learn more
+                </button>
+            </div>
+
         </section>
 
     </main>
