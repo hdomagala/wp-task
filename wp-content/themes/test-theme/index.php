@@ -11,6 +11,11 @@
 <body>
     <header class="hero-banner container-fluid d-flex flex-column vh-100">
         <div class="hero-banner__body row flex-grow-1 position-relative">
+            <picture>
+                <source media="(max-width: 499px)" srcset="<?= get_template_directory_uri(); ?>/assets/images/hero-banner-mobile.jpg">
+                <source media="(min-width: 500px)" srcset="<?= get_template_directory_uri(); ?>/assets/images/hero-banner.jpg">
+                <img class="hero-banner__image" src="<?= get_template_directory_uri(); ?>/assets/images/hero-banner.jpg" alt="Mountains and river">
+            </picture>
             <span class="icon icon--hamburger d-lg-none" data-toggle-nav="mobile-menu">
                 <span></span>
             </span>
@@ -24,22 +29,17 @@
                     </ul>
                 </nav>
             </div>
-            <picture>
-                <source media="(max-width: 499px)" srcset="<?= get_template_directory_uri(); ?>/assets/images/hero-banner-mobile.jpg">
-                <source media="(min-width: 500px)" srcset="<?= get_template_directory_uri(); ?>/assets/images/hero-banner.jpg">
-                <img class="hero-banner__image" src="<?= get_template_directory_uri(); ?>/assets/images/hero-banner.jpg" alt="Mountains and river">
-            </picture>
             <div class="hero-banner__content col h-100 text-center d-flex flex-column justify-content-center justify-content-xl-start align-items-center pb-4 position-static">
                 <img class="logo logo--big" src="<?= get_template_directory_uri(); ?>/assets/images/logo-centered.svg" alt="Applover">
                 <hr class="divider">
                 <div class="text-white flex-xl-grow-1">
-                    <p class="h3">
+                    <p class="hero-banner__title">
                         Lorem ipsum dolor sit amet, consetetur
                     </p>
-                    <p class="h2 font-weight-bold">
+                    <p class="hero-banner__title hero-banner__title--big font-weight-bold">
                         nonumy eirmod tempor invidunt ut labore et
                     </p>
-                    <p class="h3">
+                    <p class="hero-banner__title">
                         aliquyam erat, sed diam voluptua.
                     </p>
                 </div>
@@ -62,19 +62,84 @@
                     <div class="col-7 font-secondary text-uppercase font-weight-bold">
                         Lorem ipsum dolor sit amet, consectetur adipisicing.
                     </div>
-                    <div class="col-3 font-secondary font-weight-light">
+                    <div class="col-3 font-secondary font-weight-light text-right">
                         powered by applover.com
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <main>
+    <main class="py-4 pt-lg-5 mt-lg-5">
+        <section class="articles">
+            <article class="article d-flex flex-column d-lg-block">
+                <div class="article__image container-fluid px-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-6 overflow-hidden">
+                            <img src="<?= get_template_directory_uri(); ?>/assets/images/articles/1.jpg" alt="Mountains">
+                        </div>
+                    </div>
+                </div>
+                <div class="article__body container py-4 px-4 px-lg-0 font-secondary">
+                    <div class="row">
+                        <div class="col-lg-6 offset-lg-6 pl-lg-5 align-self-center">
+                            <h3 class="article__title">
+                                <span class="icon icon--circle"></span>
+                                Lorem ipsum
+                            </h3>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. <strong>At vero eos et accusam et justo duo dolores et ea rebum.</strong> Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                        </div>
+                    </div>
+                </div>
+            </article>
 
+            <article class="article d-flex flex-column d-lg-block">
+                <div class="article__image container-fluid px-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-6 offset-lg-6 overflow-hidden">
+                            <img src="<?= get_template_directory_uri(); ?>/assets/images/articles/2.jpg" alt="Mountains">
+                        </div>
+                    </div>
+                </div>
+                <div class="article__body container py-4 px-4 px-lg-0 font-secondary">
+                    <div class="row">
+                        <div class="col-lg-6 pr-lg-5 align-self-center">
+                            <h3 class="article__title">
+                                <span class="icon icon--circle"></span>
+                                Lorem ipsum
+                            </h3>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. <strong>At vero eos et accusam et justo duo dolores et ea rebum.</strong> Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article d-flex flex-column d-lg-block">
+                <div class="article__image container-fluid px-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-6 overflow-hidden">
+                            <img src="<?= get_template_directory_uri(); ?>/assets/images/articles/3.jpg" alt="Mountains">
+                        </div>
+                    </div>
+                </div>
+                <div class="article__body container py-4 px-4 px-lg-0 font-secondary">
+                    <div class="row">
+                        <div class="col-lg-6 offset-lg-6 pl-lg-5 align-self-center">
+                            <h3 class="article__title">
+                                <span class="icon icon--circle"></span>
+                                Lorem ipsum
+                            </h3>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. <strong>At vero eos et accusam et justo duo dolores et ea rebum.</strong> Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
     </main>
+
     <footer>
 
     </footer>
+
     <script src="<?= get_template_directory_uri(); ?>/assets/main.js"></script>
 </body>
 </html>

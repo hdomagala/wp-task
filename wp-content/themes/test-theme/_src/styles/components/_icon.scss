@@ -49,4 +49,13 @@
       }
     }
   }
+
+  &--circle {
+    width: rem-calc(64);
+    height: rem-calc(64);
+    border-radius: 50%;
+    border-color: $blue;
+    border-width: rem-calc(20);
+    border-style: solid;
+  }
 }
