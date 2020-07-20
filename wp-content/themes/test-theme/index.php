@@ -10,15 +10,19 @@
 </head>
 <body>
     <header class="hero-banner container-fluid d-flex flex-column vh-100">
+
         <div class="hero-banner__body row flex-grow-1 position-relative">
+
             <picture>
                 <source media="(max-width: 499px)" srcset="<?= get_template_directory_uri(); ?>/assets/images/hero-banner-mobile.jpg">
                 <source media="(min-width: 500px)" srcset="<?= get_template_directory_uri(); ?>/assets/images/hero-banner.jpg">
                 <img class="hero-banner__image" src="<?= get_template_directory_uri(); ?>/assets/images/hero-banner.jpg" alt="Mountains and river">
             </picture>
+
             <span class="icon icon--hamburger d-lg-none" data-toggle-nav="mobile-menu">
                 <span></span>
             </span>
+
             <div class="mobile-nav" id="mobile-menu">
                 <img class="logo logo--big" src="<?= get_template_directory_uri(); ?>/assets/images/logo-centered.svg" alt="Applover">
                 <nav class="mobile-nav__nav">
@@ -29,6 +33,7 @@
                     </ul>
                 </nav>
             </div>
+
             <div class="hero-banner__content col h-100 text-center d-flex flex-column justify-content-center justify-content-xl-start align-items-center pb-4 position-static">
                 <img class="logo logo--big" src="<?= get_template_directory_uri(); ?>/assets/images/logo-centered.svg" alt="Applover">
                 <hr class="divider">
@@ -45,6 +50,7 @@
                 </div>
                 <span class="icon icon--mouse d-none d-xl-inline"></span>
             </div>
+
             <nav class="hero-banner__nav d-none d-lg-flex h-100">
                 <ul>
                     <li><a class="text-white" href="#section1">Section 1</a></li>
@@ -52,7 +58,9 @@
                     <li><a class="text-white" href="#section3">Section 3</a></li>
                 </ul>
             </nav>
+
         </div>
+
         <div class="ticker shadow row d-none d-lg-block bg-white">
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
@@ -68,9 +76,13 @@
                 </div>
             </div>
         </div>
+
     </header>
+
     <main class="py-4 pt-lg-5 mt-lg-5">
+
         <section class="articles">
+
             <article class="article d-flex flex-column d-lg-block">
                 <div class="article__image container-fluid px-0">
                     <div class="row no-gutters">
@@ -79,7 +91,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="article__body container py-4 px-4 px-lg-0 font-secondary">
+                <div class="article__body container py-5 py-lg-1 px-4 px-lg-0 font-secondary">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-6 pl-lg-5 align-self-center">
                             <h3 class="article__title">
@@ -100,7 +112,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="article__body container py-4 px-4 px-lg-0 font-secondary">
+                <div class="article__body container py-5 py-lg-1 px-4 px-lg-0 font-secondary">
                     <div class="row">
                         <div class="col-lg-6 pr-lg-5 align-self-center">
                             <h3 class="article__title">
@@ -121,7 +133,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="article__body container py-4 px-4 px-lg-0 font-secondary">
+                <div class="article__body container py-5 py-lg-1 px-4 px-lg-0 font-secondary">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-6 pl-lg-5 align-self-center">
                             <h3 class="article__title">
@@ -133,7 +145,56 @@
                     </div>
                 </div>
             </article>
+
         </section>
+
+        <section class="gallery">
+            <header class="container pt-5 mt-5 pb-4 px-4 px-lg-0">
+                <h2 class="gallery__title text-uppercase font-weight-bold text-center">Section 2</h2>
+                <hr class="separator separator--with-circle">
+            </header>
+            <div class="container mt-5 px-4 px-lg-0">
+                <div class="row no-gutters">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/1.jpg" alt="Mountains">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/2.jpg" alt="Mountains">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/3.jpg" alt="Mountains">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/1.jpg" alt="Mountains">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/2.jpg" alt="Mountains">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/3.jpg" alt="Mountains">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 d-none d-lg-block">
+                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/1.jpg" alt="Mountains">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 d-none d-lg-block">
+                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/2.jpg" alt="Mountains">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 d-none d-lg-block">
+                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/3.jpg" alt="Mountains">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 d-none d-lg-block">
+                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/1.jpg" alt="Mountains">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 d-none d-lg-block">
+                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/2.jpg" alt="Mountains">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 d-none d-lg-block">
+                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/3.jpg" alt="Mountains">
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer>
