@@ -6,6 +6,11 @@
 
 // Vendors
 @import 'vendors/bootstrap';
+@import 'vendors/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+//@import '~@fortawesome/fontawesome-free/scss/solid';
+//@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/brands';
 
 // Base
 @import 'base/typography';
@@ -18,7 +23,9 @@
 @import 'components/article';
 @import 'components/separator';
 @import 'components/cta';
+@import 'components/socials';
 
 // Layout elements
 @import 'layout/hero-banner';
 @import 'layout/mobile-nav';
+@import 'layout/footer';

@@ -31,6 +31,7 @@
   .btn {
     padding: rem-calc(12 38);
     min-width: rem-calc(160);
+    color: var(--primary);
 
     @include media-breakpoint-up(md) {
       padding: rem-calc(12 51);

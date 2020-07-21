@@ -6,4 +6,8 @@
       width: rem-calc(300);
     }
   }
+
+  &--black {
+    filter: invert(0.9);
+  }
 }

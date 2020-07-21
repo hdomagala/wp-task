@@ -47,8 +47,7 @@
     transform: translateY(-50%);
     align-items: center;
     height: 100%;
-    font-size: rem-calc(13);
-    font-family: $font-family-secondary;
+    font-size: $font-size-sm;
 
     ul {
       font-weight: $font-weight-bold;
