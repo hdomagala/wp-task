@@ -33,6 +33,10 @@
 
     @include media-breakpoint-up(500px) {
       object-fit: cover;
+
+      @media (orientation: landscape) {
+        object-fit: inherit;
+      }
     }
 
     @include media-breakpoint-up(lg) {
