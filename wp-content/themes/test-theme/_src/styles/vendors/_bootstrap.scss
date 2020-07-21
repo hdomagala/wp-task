@@ -1,5 +1,43 @@
-// Imports
+// Settings
 
+// -- Colors
+$primary: #40AE49;
+
+$gray-100: #EAEAEA;
+$gray-800: #252B35;
+$black: #1C1F2B;
+$blue: #86D2E3;
+
+// -- Fonts
+$enable-responsive-font-sizes: true;
+
+$font-family-sans-serif: "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$font-size-lg: rem-calc(24);
+$font-size-sm: rem-calc(14);
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-bolder: 900;
+
+$h1-font-size: rem-calc(40);
+$h2-font-size: rem-calc(32);
+$h3-font-size: rem-calc(24);
+
+// -- Anchors
+$link-hover-decoration: none;
+
+// -- Shadow
+$enable-shadows: true;
+$box-shadow: rem-calc(0 5 10) rgba($black, .20);
+
+// -- Button
+$btn-padding-y-lg: rem-calc(16);
+$btn-padding-x-lg: rem-calc(38);
+$btn-border-radius: rem-calc(25);
+
+  // Imports
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
@@ -7,7 +45,6 @@
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/type";
 @import "~bootstrap/scss/images";
-//@import "~bootstrap/scss/code";
 @import "~bootstrap/scss/grid";
 @import "~bootstrap/scss/tables";
 @import "~bootstrap/scss/forms";
@@ -31,9 +68,8 @@
 //@import "~bootstrap/scss/close";
 //@import "~bootstrap/scss/modal";
 //@import "~bootstrap/scss/tooltip";
+//@import "~bootstrap/scss/code";
 //@import "~bootstrap/scss/popover";
 //@import "~bootstrap/scss/carousel";
-@import "~bootstrap/scss/utilities";
 //@import "~bootstrap/scss/print";
-
-// Settings
+@import "~bootstrap/scss/utilities";

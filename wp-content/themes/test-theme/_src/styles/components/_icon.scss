@@ -1,0 +1,61 @@
+.icon {
+  &--mouse {
+    width: rem-calc(32);
+    height: rem-calc(48);
+    border: rem-calc(1) solid $white;
+    border-radius: rem-calc(16);
+    text-align: center;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: rem-calc(8);
+      width: rem-calc(4);
+      height: rem-calc(14);
+      background: $white;
+      border-radius: rem-calc(10);
+      margin-left: rem-calc(-2);
+      animation: 1.5s ease-in infinite running scroll;
+    }
+  }
+
+  &--hamburger {
+    position: fixed;
+    top: rem-calc(32);
+    left: rem-calc(20);
+    width: rem-calc(24);
+    z-index: $zindex-tooltip;
+
+    span, &::after, &::before {
+      background-color: $white;
+      border-radius: 3px;
+      content: '';
+      display: block;
+      height: rem-calc(3);
+      margin: rem-calc(5 0);
+      transition: transform .2s ease-in-out;
+    }
+
+    &.active{
+      &::before {
+        transform: translateY(8px) rotate(135deg);
+      }
+      &::after {
+        transform: translateY(-8px) rotate(-135deg);
+      }
+      & span {
+        transform: scale(0);
+      }
+    }
+  }
+
+  &--circle {
+    width: rem-calc(64);
+    height: rem-calc(64);
+    border-radius: 50%;
+    border-color: $blue;
+    border-width: rem-calc(20);
+    border-style: solid;
+  }
+}

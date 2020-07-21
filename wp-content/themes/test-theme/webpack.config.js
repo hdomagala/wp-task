@@ -7,6 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PurgeCSSPlugin = require('purgecss-webpack-plugin');
 
 // IMAGES
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 const PATHS = {
@@ -64,6 +65,12 @@ module.exports = (env, argv) => {
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({
                 filename: "main.css",
+            }),
+            new CopyWebpackPlugin({
+                patterns: [
+                    {from: '_src/images', to: 'images'},
+                    {from: 'node_modules/@fortawesome/fontawesome-free/webfonts', to: 'fonts'},
+                ]
             })
         ]
     };

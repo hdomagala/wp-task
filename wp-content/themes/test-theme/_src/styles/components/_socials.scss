@@ -1,0 +1,17 @@
+.socials {
+  &__icon {
+    width: rem-calc(32);
+    height: rem-calc(32);
+    background: var(--primary);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .2s linear;
+
+    &:hover {
+      transition: opacity .2s linear;
+      opacity: 0.8;
+    }
+  }
+}
