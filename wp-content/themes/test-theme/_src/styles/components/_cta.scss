@@ -24,7 +24,7 @@
     width: rem-calc(80);
 
     @include media-breakpoint-up(md) {
-      width: auto;
+      width: rem-calc(160);
     }
   }
 

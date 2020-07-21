@@ -15,6 +15,7 @@ if( !function_exists('add_action') ) {
 include('includes/activate.php');
 include('includes/init-articles.php');
 include('includes/init-metaboxes.php');
+include('includes/init-customizer.php');
 include('includes/enqueue.php');
 
 // Admin customization
@@ -27,3 +28,7 @@ add_action('init','hd_articles_init');
 // Metaboxes
 add_action('add_meta_boxes', ['HD_Color_Meta_Box', 'add']);
 add_action('save_post', ['HD_Color_Meta_Box', 'save']);
+
+// Customizer
+add_action( 'customize_register', ['HD_Primary_Color_Customizer', 'register'] );
+add_action( 'customize_register', ['HD_Logos_Customizer', 'register'] );
