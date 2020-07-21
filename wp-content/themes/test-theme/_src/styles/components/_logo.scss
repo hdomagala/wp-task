@@ -6,6 +6,13 @@
       width: rem-calc(300);
     }
   }
+  &--medium {
+    width: rem-calc(160);
+  }
+
+  &--small {
+    height: rem-calc(35);
+  }
 
   &--black {
     filter: invert(0.9);

@@ -6,13 +6,17 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/assets/main.css">
+    <style>
+        :root {
+            --primary: <?php echo get_theme_mod('hd_primary_color', '#40AE49'); ?> !important;
+        }
+    </style>
     <title>Applover Test Task</title>
 </head>
 <body>
     <header class="hero-banner container-fluid d-flex flex-column vh-100">
 
         <div class="hero-banner__body row flex-grow-1 position-relative">
-
             <picture>
                 <source media="(max-width: 499px)" srcset="<?= get_template_directory_uri(); ?>/assets/images/hero-banner-mobile.jpg">
                 <source media="(min-width: 500px)" srcset="<?= get_template_directory_uri(); ?>/assets/images/hero-banner.jpg">
@@ -24,7 +28,7 @@
             </span>
 
             <div class="mobile-nav" id="mobile-menu">
-                <img class="logo logo--big" src="<?= get_template_directory_uri(); ?>/assets/images/logo-centered.svg" alt="Applover">
+                <img class="logo logo--big" src="<?= wp_get_attachment_url ( get_theme_mod('hd_centered_logo') ); ?>" alt="Applover">
                 <nav class="mobile-nav__nav">
                     <ul>
                         <li><a class="text-white" href="#section1">Section 1</a></li>
@@ -35,7 +39,7 @@
             </div>
 
             <div class="hero-banner__content col h-100 text-center d-flex flex-column justify-content-center justify-content-xl-start align-items-center pb-4 position-static">
-                <img class="logo logo--big" src="<?= get_template_directory_uri(); ?>/assets/images/logo-centered.svg" alt="Applover">
+                <img class="logo logo--big" src="<?= wp_get_attachment_url ( get_theme_mod('hd_centered_logo') ); ?>" alt="Applover">
                 <hr class="divider">
                 <div class="text-white font-secondary flex-xl-grow-1">
                     <p class="hero-banner__title">
@@ -65,7 +69,7 @@
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
                     <div class="col-2">
-                        <img class="logo" src="<?= get_template_directory_uri(); ?>/assets/images/logo-left.svg" alt="Applover">
+                        <img class="logo logo--small" src="<?= wp_get_attachment_url ( get_theme_mod('hd_left_logo') ); ?>" alt="Applover">
                     </div>
                     <div class="col-7 font-secondary text-uppercase font-weight-bold">
                         Lorem ipsum dolor sit amet, consectetur adipisicing.
@@ -207,7 +211,7 @@
             </picture>
 
             <div class="cta__body container text-center">
-                <img class="logo" src="<?= get_template_directory_uri(); ?>/assets/images/logo-centered.svg" alt="Applover">
+                <img class="logo logo--medium" src="<?= wp_get_attachment_url ( get_theme_mod('hd_centered_logo') ); ?>" alt="Applover">
                 <p class="mx-auto text-white mt-4 mb-4 mb-lg-5">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.
                 </p>
@@ -234,8 +238,8 @@
 
                 <div class="col col-12 col-lg-3">
 
-                    <img class="logo logo--black d-block d-lg-none mx-auto" src="<?= get_template_directory_uri(); ?>/assets/images/logo-centered.svg" alt="Applover">
-                    <img class="logo d-none d-lg-block " src="<?= get_template_directory_uri(); ?>/assets/images/logo-left.svg" alt="Applover">
+                    <img class="logo logo--black d-block d-lg-none mx-auto" src="<?= wp_get_attachment_url ( get_theme_mod('hd_centered_logo') ); ?>" alt="Applover">
+                    <img class="logo d-none d-lg-block " src="<?= wp_get_attachment_url ( get_theme_mod('hd_left_logo') ); ?>" alt="Applover">
 
                     <p class="mt-4 px-2 px-lg-0 text-center text-lg-left font-weight-light font-small font-lg-base">
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -313,7 +317,7 @@
                                 </g>
                             </svg>
 
-                            <span class="font-weight-bold ml-4">
+                            <span class="font-weight-bold ml-4 d-block d-lg-inline mt-3 mt-lg-0">
                                 <a class="text-black" href="mailto:loremipsum@gmail.com">loremipsum@gmail.com</a>
                             </span>
                         </p>

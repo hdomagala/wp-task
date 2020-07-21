@@ -36,6 +36,7 @@ wp-config.php
 /wp-content/themes/test-theme/assets
 
 # Plugins whitelist
+!/wp-content/plugins/wp-toolkit
 
 # Other whitelist
 !/wp-content/uploads
