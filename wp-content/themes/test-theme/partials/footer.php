@@ -1,0 +1,115 @@
+<footer class="footer mt-5 mt-lg-0 position-relative overflow-hidden">
+
+    <picture>
+        <source media="(max-width: 599px)" srcset="<?= get_template_directory_uri(); ?>/assets/images/bg-footer-mobile.jpg">
+        <source media="(min-width: 600px)" srcset="<?= get_template_directory_uri(); ?>/assets/images/bg-footer.jpg">
+        <img class="footer__background" src="<?= get_template_directory_uri(); ?>/assets/images/bg-footer.jpg" alt="">
+    </picture>
+
+    <div class="footer__body container">
+
+        <div class="row">
+
+            <div class="col col-12 col-lg-3">
+
+                <img class="logo logo--black d-block d-lg-none mx-auto" src="<?= wp_get_attachment_url ( get_theme_mod('hd_centered_logo') ); ?>" alt="Applover">
+                <img class="logo d-none d-lg-block " src="<?= wp_get_attachment_url ( get_theme_mod('hd_left_logo') ); ?>" alt="Applover">
+
+                <p class="mt-4 px-2 px-lg-0 text-center text-lg-left font-weight-light font-small font-lg-base">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                </p>
+
+                <ul class="socials list-inline px-2 px-lg-0 text-center text-lg-left">
+                    <li class="list-inline-item">
+                        <a href="" class="socials__icon">
+                            <span class="fab fa-facebook-f text-white"></span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="" class="socials__icon">
+                            <span class="fab fa-facebook-f text-white"></span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="" class="socials__icon">
+                            <span class="fab fa-facebook-f text-white"></span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="col col-12 col-lg-4 offset-lg-1">
+
+                <nav class="footer__nav text-center text-lg-left mt-4 mt-lg-0">
+
+                    <h3 class="font-weight-bolder font-small font-lg-base text-uppercase">
+                        Menu
+                    </h3>
+
+                    <ul>
+                        <li>
+                            <a href="#">Section 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Section 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Section 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Section 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Section 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Section 1</a>
+                        </li>
+                    </ul>
+
+                </nav>
+
+            </div>
+
+            <div class="col col-12 col-lg-3 offset-lg-1">
+
+                <div class="text-center text-lg-left text-lg-left mt-5 mt-lg-0">
+
+                    <h3 class="font-weight-bolder font-base text-uppercase">
+                        Contact
+                    </h3>
+
+                    <p class="font-weight-light mt-3 mb-5 px-2 px-lg-0">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                    </p>
+
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20">
+                            <g transform="translate(-2 -7)">
+                                <path fill="var(--primary)" d="M23.6,7H4.4A2.4,2.4,0,0,0,2,9.4V24.6A2.4,2.4,0,0,0,4.4,27H23.6A2.4,2.4,0,0,0,26,24.6V9.4A2.4,2.4,0,0,0,23.6,7ZM9.517,18.044l-4,5.2a.4.4,0,1,1-.634-.487l4-5.2a.4.4,0,1,1,.634.487Zm13.526,5.274a.4.4,0,0,1-.56-.074l-4-5.2a.4.4,0,1,1,.634-.487l4,5.2A.4.4,0,0,1,23.044,23.317Zm.032-12.828-8.8,8.4a.4.4,0,0,1-.552,0l-8.8-8.4a.4.4,0,1,1,.552-.579L14,18.047,22.524,9.91a.4.4,0,0,1,.552.579Z" transform="translate(0 0)"/>
+                            </g>
+                        </svg>
+
+                        <span class="font-weight-bold ml-4 d-block d-lg-inline mt-3 mt-lg-0">
+                                <a class="text-black" href="mailto:loremipsum@gmail.com">loremipsum@gmail.com</a>
+                            </span>
+                    </p>
+
+                </div>
+
+                <p class="text-white px-2 mt-4 text-center d-lg-none">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                </p>
+
+                <p class="text-white font-small font-secondary mt-5 text-center d-lg-none">
+                    powered by applover.com
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
