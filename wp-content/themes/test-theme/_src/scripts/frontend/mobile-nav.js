@@ -10,4 +10,14 @@ export const initMobileNav = () => {
         $(this).toggleClass('active');
         $('body').toggleClass('disable-scroll');
     });
+
+    menu.find('a').click(function(e) {
+        menu.toggleClass('active');
+        toggleButton.toggleClass('active');
+        $('body').toggleClass('disable-scroll');
+    });
+
+    $(window).scroll(function(e) {
+        $(window).scrollTop() > 200 ? toggleButton.addClass('scrolled') : toggleButton.removeClass('scrolled');
+    });
 };

@@ -4,7 +4,7 @@
     $cta_image_alt = get_post_meta($cta_bg_image_id, '_wp_attachment_image_alt', true);
 ?>
 
-<section class="cta mt-5 mb-5 pt-4 pt-lg-5 overflow-hidden">
+<section class="cta mt-5 mb-5 pt-4 pt-lg-5 overflow-hidden" id="section3">
 
     <h2 class="sr-only">
         <?= get_field('cta_title') ?>

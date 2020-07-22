@@ -1,4 +1,4 @@
-<section class="gallery mb-lg-5">
+<section class="gallery mb-lg-5" id="section2">
 
     <header class="container pt-5 mt-5 pb-4 px-4 px-lg-0">
         <h2 class="gallery__title text-uppercase font-weight-bolder text-center">

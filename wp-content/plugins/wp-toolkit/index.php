@@ -34,3 +34,4 @@ add_action('save_post', ['HD_Color_Meta_Box', 'save']);
 // Customizer
 add_action( 'customize_register', ['HD_Primary_Color_Customizer', 'register'] );
 add_action( 'customize_register', ['HD_Logos_Customizer', 'register'] );
+

@@ -3,6 +3,14 @@
 
   a {
     color: $black;
+
+    &.footer__contact-link {
+      color: $white;
+
+      @include media-breakpoint-up(lg) {
+        color: $black;
+      }
+    }
   }
 
   &__background {
@@ -46,7 +54,6 @@
   .logo {
     width: rem-calc(130);
   }
-
 
   @include media-breakpoint-up(lg) {
     min-height: rem-calc(700);

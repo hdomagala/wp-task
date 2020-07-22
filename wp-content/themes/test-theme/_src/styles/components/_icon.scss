@@ -34,18 +34,27 @@
       display: block;
       height: rem-calc(3);
       margin: rem-calc(5 0);
-      transition: transform .2s ease-in-out;
+      transition: all .2s ease-in-out;
+    }
+
+    &.scrolled {
+      span, &::after, &::before {
+        background-color: $black;
+      }
     }
 
     &.active{
       &::before {
         transform: translateY(8px) rotate(135deg);
+        background-color: $white;
       }
       &::after {
         transform: translateY(-8px) rotate(-135deg);
+        background-color: $white;
       }
       & span {
         transform: scale(0);
+        background-color: $white;
       }
     }
   }

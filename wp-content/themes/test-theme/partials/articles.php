@@ -1,4 +1,4 @@
-<section class="articles">
+<section class="articles" id="section1">
 
     <?php
         $articles_args = array(

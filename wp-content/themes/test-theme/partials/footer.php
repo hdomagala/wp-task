@@ -57,26 +57,11 @@
                         Menu
                     </h3>
 
-                    <ul>
-                        <li>
-                            <a href="#">Section 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Section 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Section 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Section 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Section 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Section 1</a>
-                        </li>
-                    </ul>
+                    <?php
+                        wp_nav_menu( array(
+                            'theme_location'  => 'footer',
+                        ) );
+                    ?>
 
                 </nav>
 
@@ -102,7 +87,7 @@
                         </svg>
 
                         <span class="font-weight-bold ml-4 d-block d-lg-inline mt-3 mt-lg-0">
-                                <a class="text-black" href="mailto:<?= get_field('contact_email') ?>"><?= get_field('contact_email') ?></a>
+                                <a class="footer__contact-link" href="mailto:<?= get_field('contact_email') ?>"><?= get_field('contact_email') ?></a>
                         </span>
                     </p>
 

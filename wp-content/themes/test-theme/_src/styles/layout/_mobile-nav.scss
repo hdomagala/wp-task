@@ -8,9 +8,7 @@
   height: 100%;
   text-align: center;
   z-index: -1;
-  opacity: 0;
-  transform: scale(0);
-  transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: none;
 
   ul {
     margin-top: rem-calc(80);
@@ -27,15 +25,14 @@
 
     a {
       padding: rem-calc(20);
+      color: $white;
     }
   }
 
   &.active {
-    transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    opacity: 1;
-    transform: scale(1);
     z-index: $zindex-popover;
     overflow-y: scroll;
+    display: block;
   }
 }
 

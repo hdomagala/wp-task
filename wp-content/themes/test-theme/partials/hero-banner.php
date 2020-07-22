@@ -19,11 +19,11 @@
     <div class="mobile-nav" id="mobile-menu">
         <img class="logo logo--big" src="<?= wp_get_attachment_url ( get_theme_mod('hd_centered_logo') ); ?>" alt="Applover">
         <nav class="mobile-nav__nav">
-            <ul>
-                <li><a class="text-white" href="#section1">Section 1</a></li>
-                <li><a class="text-white" href="#section2">Section 2</a></li>
-                <li><a class="text-white" href="#section3">Section 3</a></li>
-            </ul>
+            <?php
+                wp_nav_menu( array(
+                    'theme_location'  => 'header',
+                ) );
+            ?>
         </nav>
     </div>
 
@@ -45,11 +45,11 @@
     </div>
 
     <nav class="hero-banner__nav d-none d-lg-flex h-100">
-        <ul>
-            <li><a class="text-white" href="#section1">Section 1</a></li>
-            <li><a class="text-white" href="#section2">Section 2</a></li>
-            <li><a class="text-white" href="#section3">Section 3</a></li>
-        </ul>
+        <?php
+            wp_nav_menu( array(
+                'theme_location'  => 'header',
+            ) );
+        ?>
     </nav>
 
 </div>
