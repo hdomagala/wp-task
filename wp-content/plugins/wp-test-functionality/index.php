@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: Custom WordPress Toolkit
+ * Plugin Name: Custom WordPress Theme Functionality
  * Description: A simple custom plugin with functionality for Applover task
  * Version: 1.0.0
  * Author: Hanna Domagała

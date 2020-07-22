@@ -28,17 +28,21 @@
                 <ul class="socials list-inline px-2 px-lg-0 text-center text-lg-left">
                     <?php
                         $socials = array(
-                            'linkedin'  => array( "url" => get_field('footer_linkedin_url'), "icon" => "fab fa-linkedin-in" ),
-                            'facebook'  => array( "url" => get_field('footer_facebook_url'), "icon" => "fab fa-facebook-f" ),
-                            'pinterest' => array( "url" => get_field('footer_pinterest_url'), "icon" => "fab fa-pinterest-p" ),
+                            'linkedin'  => array( "url" => get_field('footer_linkedin_url'), "icon" => "fab fa-linkedin-in", "name" => "LinkedIn" ),
+                            'facebook'  => array( "url" => get_field('footer_facebook_url'), "icon" => "fab fa-facebook-f", "name" => "Facebook" ),
+                            'pinterest' => array( "url" => get_field('footer_pinterest_url'), "icon" => "fab fa-pinterest-p", "name" => "Pinterest" ),
                         );
 
                         foreach($socials as $social):
                     ?>
 
                     <li class="list-inline-item">
-                        <a href="<?= $social["url"] ?>" class="socials__icon" target="_blank">
-                            <span class="<?= $social["icon"] ?> text-white"></span>
+                        <a href="<?= $social["url"] ?>" class="socials__icon" target="_blank" rel="noopener">
+                            <span class="<?= $social["icon"] ?> text-white">
+                                <span class="sr-only">
+                                    <?= $social["name"] ?>
+                                </span>
+                            </span>
                         </a>
                     </li>
 

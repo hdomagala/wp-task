@@ -1,5 +1,9 @@
 <section class="articles" id="section1">
 
+    <h2 class="sr-only">
+        Lorem ipsum
+    </h2>
+
     <?php
         $articles_args = array(
             'post_type' => 'articles',
