@@ -68,7 +68,6 @@ module.exports = (env, argv) => {
             }),
             new CopyWebpackPlugin({
                 patterns: [
-                    {from: '_src/images', to: 'images'},
                     {from: 'node_modules/@fortawesome/fontawesome-free/webfonts', to: 'fonts'},
                 ]
             })
