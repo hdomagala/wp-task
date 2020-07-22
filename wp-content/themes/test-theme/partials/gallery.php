@@ -8,7 +8,7 @@
     </header>
 
     <div class="container mt-5 px-4 px-lg-0">
-        <div class="row no-gutters">
+        <div class="row justify-content-center no-gutters">
             <?php
             $gallery_images = get_field('gallery_images');
 
