@@ -17,10 +17,15 @@
     <header class="hero-banner container-fluid d-flex flex-column vh-100">
 
         <div class="hero-banner__body row flex-grow-1 position-relative">
+            <?php
+                $hero_image_mobile_id = get_field('hero_background_image_mobile');
+                $hero_image_id = get_field('hero_background_image');
+                $hero_image_alt = get_post_meta($hero_image_id, '_wp_attachment_image_alt', true);
+            ?>
             <picture>
-                <source media="(max-width: 499px)" srcset="<?= get_template_directory_uri(); ?>/assets/images/hero-banner-mobile.jpg">
-                <source media="(min-width: 500px)" srcset="<?= get_template_directory_uri(); ?>/assets/images/hero-banner.jpg">
-                <img class="hero-banner__image" src="<?= get_template_directory_uri(); ?>/assets/images/hero-banner.jpg" alt="Mountains and river">
+                <source media="(max-width: 499px)" srcset="<?= wp_get_attachment_url ( $hero_image_mobile_id ) ?>">
+                <source media="(min-width: 500px)" srcset="<?= wp_get_attachment_url ( $hero_image_id) ?>">
+                <img class="hero-banner__image" src="<?= wp_get_attachment_url ( $hero_image_id ) ?>" alt="<?= $hero_image_alt ?>">
             </picture>
 
             <span class="icon icon--hamburger d-lg-none" data-toggle-nav="mobile-menu">
@@ -43,13 +48,13 @@
                 <hr class="divider">
                 <div class="text-white font-secondary flex-xl-grow-1">
                     <p class="hero-banner__title">
-                        Lorem ipsum dolor sit amet, consetetur
+                        <?php the_field('hero_banner_text-1'); ?>
                     </p>
-                    <p class="hero-banner__title hero-banner__title--big font-weight-bold">
-                        nonumy eirmod tempor invidunt ut labore et
-                    </p>
+                    <h1 class="hero-banner__title hero-banner__title--big font-weight-bold">
+                        <?php the_field('hero_banner_h1'); ?>
+                    </h1>
                     <p class="hero-banner__title">
-                        aliquyam erat, sed diam voluptua.
+                        <?php the_field('hero_banner_text-2'); ?>
                     </p>
                 </div>
                 <span class="icon icon--mouse d-none d-xl-inline"></span>
@@ -72,7 +77,7 @@
                         <img class="logo logo--small" src="<?= wp_get_attachment_url ( get_theme_mod('hd_left_logo') ); ?>" alt="Applover">
                     </div>
                     <div class="col-7 font-secondary text-uppercase font-weight-bold">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing.
+                        <?php the_field('ticker_text'); ?>
                     </div>
                     <div class="col-3 font-secondary font-weight-light text-right">
                         powered by applover.com
@@ -155,48 +160,30 @@
         <section class="gallery mb-lg-5">
 
             <header class="container pt-5 mt-5 pb-4 px-4 px-lg-0">
-                <h2 class="gallery__title text-uppercase font-weight-bolder text-center">Section 2</h2>
+                <h2 class="gallery__title text-uppercase font-weight-bolder text-center">
+                    <?= get_field('gallery_section_title') ?>
+                </h2>
                 <hr class="separator separator--with-circle">
             </header>
 
             <div class="container mt-5 px-4 px-lg-0">
                 <div class="row no-gutters">
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/1.jpg" alt="Mountains">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/2.jpg" alt="Mountains">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/3.jpg" alt="Mountains">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/1.jpg" alt="Mountains">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/2.jpg" alt="Mountains">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/3.jpg" alt="Mountains">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2 d-none d-lg-block">
-                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/1.jpg" alt="Mountains">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2 d-none d-lg-block">
-                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/2.jpg" alt="Mountains">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2 d-none d-lg-block">
-                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/3.jpg" alt="Mountains">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2 d-none d-lg-block">
-                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/1.jpg" alt="Mountains">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2 d-none d-lg-block">
-                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/2.jpg" alt="Mountains">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2 d-none d-lg-block">
-                        <img class="w-100" src="<?= get_template_directory_uri(); ?>/assets/images/gallery/3.jpg" alt="Mountains">
-                    </div>
+                    <?php
+                        $gallery_images = get_field('gallery_images');
+
+                        foreach ($gallery_images as $i=>$image):
+                            if ($i > 11) {
+                                break;
+                            }
+                            $image_src = get_the_post_thumbnail_url($image->ID, 'medium');
+                            $image_alt = get_post_meta($hero_image_id, '_wp_attachment_image_alt', true);
+                    ?>
+                        <div class="col-6 col-md-4 col-lg-2 <?= $i > 7 ? "d-none d-lg-block" : "" ?>">
+                            <img class="w-100" src="<?= $image_src ?>" alt="<?= $image_alt  ?>">
+                        </div>
+                    <?php
+                        endforeach;
+                    ?>
                 </div>
             </div>
 
