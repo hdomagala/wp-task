@@ -6,6 +6,8 @@
 
         <?php get_template_part( 'partials/articles' ); ?>
 
+        <?php get_template_part( 'partials/gallery' ); ?>
+
         <?php get_template_part( 'partials/cta' ); ?>
 
     </main>
