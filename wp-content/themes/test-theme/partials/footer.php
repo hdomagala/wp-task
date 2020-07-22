@@ -1,9 +1,15 @@
+<?php
+    $footer_background_mobile_id = get_field('footer_background_image_mobile');
+    $footer_background_image_id = get_field('footer_background_image');
+    $footer_background_image_alt = get_post_meta($footer_background_image_id, '_wp_attachment_image_alt', true);
+?>
+
 <footer class="footer mt-5 mt-lg-0 position-relative overflow-hidden">
 
     <picture>
-        <source media="(max-width: 599px)" srcset="<?= get_template_directory_uri(); ?>/assets/images/bg-footer-mobile.jpg">
-        <source media="(min-width: 600px)" srcset="<?= get_template_directory_uri(); ?>/assets/images/bg-footer.jpg">
-        <img class="footer__background" src="<?= get_template_directory_uri(); ?>/assets/images/bg-footer.jpg" alt="">
+        <source media="(max-width: 599px)" srcset="<?= wp_get_attachment_url ( $footer_background_mobile_id ) ?>">
+        <source media="(min-width: 600px)" srcset="<?= wp_get_attachment_url ( $footer_background_image_id ) ?>">
+        <img class="footer__background" src="<?= wp_get_attachment_url ( $footer_background_image_id ) ?>" alt="<?= $footer_background_image_alt ?>">
     </picture>
 
     <div class="footer__body container">
@@ -16,25 +22,29 @@
                 <img class="logo d-none d-lg-block " src="<?= wp_get_attachment_url ( get_theme_mod('hd_left_logo') ); ?>" alt="Applover">
 
                 <p class="mt-4 px-2 px-lg-0 text-center text-lg-left font-weight-light font-small font-lg-base">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    <?= get_field('footer_text') ?>
                 </p>
 
                 <ul class="socials list-inline px-2 px-lg-0 text-center text-lg-left">
+                    <?php
+                        $socials = array(
+                            'linkedin'  => array( "url" => get_field('footer_linkedin_url'), "icon" => "fab fa-linkedin-in" ),
+                            'facebook'  => array( "url" => get_field('footer_facebook_url'), "icon" => "fab fa-facebook-f" ),
+                            'pinterest' => array( "url" => get_field('footer_pinterest_url'), "icon" => "fab fa-pinterest-p" ),
+                        );
+
+                        foreach($socials as $social):
+                    ?>
+
                     <li class="list-inline-item">
-                        <a href="" class="socials__icon">
-                            <span class="fab fa-facebook-f text-white"></span>
+                        <a href="<?= $social["url"] ?>" class="socials__icon" target="_blank">
+                            <span class="<?= $social["icon"] ?> text-white"></span>
                         </a>
                     </li>
-                    <li class="list-inline-item">
-                        <a href="" class="socials__icon">
-                            <span class="fab fa-facebook-f text-white"></span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="" class="socials__icon">
-                            <span class="fab fa-facebook-f text-white"></span>
-                        </a>
-                    </li>
+
+                    <?php
+                        endforeach;;
+                    ?>
                 </ul>
 
             </div>
@@ -81,7 +91,7 @@
                     </h3>
 
                     <p class="font-weight-light mt-3 mb-5 px-2 px-lg-0">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        <?= get_field('footer_text') ?>
                     </p>
 
                     <p>
@@ -92,8 +102,8 @@
                         </svg>
 
                         <span class="font-weight-bold ml-4 d-block d-lg-inline mt-3 mt-lg-0">
-                                <a class="text-black" href="mailto:loremipsum@gmail.com">loremipsum@gmail.com</a>
-                            </span>
+                                <a class="text-black" href="mailto:<?= get_field('contact_email') ?>"><?= get_field('contact_email') ?></a>
+                        </span>
                     </p>
 
                 </div>
