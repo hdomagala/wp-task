@@ -19,6 +19,8 @@
 
 
         while ( $articles_loop->have_posts() ) : $articles_loop->the_post();
+    
+        if ($article_counter > 3) break;
 
         $side_img_url = get_the_post_thumbnail_url($post->ID, 'article');
         $side_img_alt = get_post_meta($post->ID, '_wp_attachment_image_alt', true);
